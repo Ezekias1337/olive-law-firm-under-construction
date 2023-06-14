@@ -1,0 +1,130 @@
+:root {
+  --primary-color: #264166;
+  --secondary-color: #34598b;
+  --tertiary-color: #4e698e;
+  --quarternary-color: #587398;
+  --quinternary-color: #a8c3e8;
+  --sexternary-color: #bcd7fc;
+  --gray: #b4b4b4;
+  --light-gray: #e6e6e6;
+  --neutral: #ffffff;
+  --black: #000000;
+  --transparent-black: rgba(0, 0, 0, 0.8);
+  --success: #8cd971;
+  --error: #eb7373;
+  --extra-extra-large-font: 56.83px;
+  --extra-large-font: 42.63px;
+  --large-font: 31.98px;
+  --medium-font: 23.99px;
+  --small-font: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+span,
+p {
+  color: var(--neutral);
+}
+
+h1 {
+  font-size: var(--extra-extra-large-font);
+}
+
+p {
+  font-size: var(--large-font);
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+main {
+  width: 100vw;
+  height: 100%;
+  background: var(--transparent-black);
+}
+
+section {
+  z-index: 1;
+  position: relative;
+}
+
+.background-image {
+  height: 100%;
+  width: 100%;
+  opacity: 0.1;
+  position: absolute;
+  z-index: 0;
+}
+
+.main-content {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5%;
+  padding-bottom: 5.6%;
+}
+
+.logo {
+  width: 40%;
+}
+
+.logo-wrapper,
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-wrapper button {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 28px;
+  padding-right: 28px;
+  font-size: var(--small-font);
+  background-color: var(--primary-color);
+  color: var(--neutral);
+  border: 1.5px solid var(--neutral);
+}
+
+.button-wrapper button:hover,
+.button-wrapper button:focus,
+.button-wrapper button:active {
+  background-color: var(--secondary-color);
+  filter: drop-shadow(0px 4px 3px var(--neutral));
+}
+
+@media screen and (max-width: 576px) {
+  .background-image {
+    object-fit: cover;
+  }
+
+  .main-content {
+    padding-top: 20%;
+    padding-bottom: 50%;
+  }
+
+  .main-content h1 {
+    padding-top: 10%;
+  }
+
+  .logo {
+    width: 70vw;
+  }
+}
